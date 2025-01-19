@@ -1,5 +1,5 @@
 {
-  "name": "result",
+  "name": "result-ts",
   "version": "0.0.1",
   "description": "Typescript implementation of the Result type pattern",
   "main": "dist/index.js",
