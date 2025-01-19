@@ -1,6 +1,6 @@
 # Result
 
-Typescript implementation of the [Result](https://en.wikipedia.org/wiki/Result_type) type pattern
+Typescript implementation of the [Result](https://en.wikipedia.org/wiki/Result_type) type pattern.
 
 ## Authors
 
