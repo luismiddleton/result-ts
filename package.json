@@ -1,5 +1,5 @@
 {
-  "name": "result-ts",
+  "name": "@luism/result-ts",
   "version": "0.0.2",
   "description": "Typescript implementation of the Result type pattern",
   "main": "dist/index.js",
