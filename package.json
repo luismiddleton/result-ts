@@ -7,7 +7,7 @@
     "build": "tsup",
     "changeset": "changeset",
     "ci:version": "changeset version",
-    "ci:publish": "pnpm publish -r --no-git-checks",
+    "ci:publish": "pnpm publish -r --no-git-checks --access public",
     "test": "vitest --coverage"
   },
   "keywords": [
