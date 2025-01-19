@@ -1,6 +1,6 @@
 {
   "name": "result-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typescript implementation of the Result type pattern",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,11 @@
     "ci:publish": "pnpm publish -r",
     "test": "vitest --coverage"
   },
-  "keywords": ["typescript", "result", "pattern"],
+  "keywords": [
+    "typescript",
+    "result",
+    "pattern"
+  ],
   "author": "Luis Middleton",
   "license": "MIT",
   "devDependencies": {
