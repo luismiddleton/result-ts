@@ -10,7 +10,7 @@
     "ci:publish": "pnpm publish -r",
     "test": "vitest --coverage"
   },
-  "keywords": [],
+  "keywords": ["typescript", "result", "pattern"],
   "author": "Luis Middleton",
   "license": "MIT",
   "devDependencies": {
