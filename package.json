@@ -1,0 +1,23 @@
+{
+  "name": "result",
+  "version": "0.0.1",
+  "description": "Typescript implementation of the Result type pattern",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "changeset": "changeset",
+    "ci:version": "changeset version",
+    "ci:publish": "pnpm publish -r",
+    "test": "vitest --coverage"
+  },
+  "keywords": [],
+  "author": "Luis Middleton",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@vitest/coverage-v8": "^3.0.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.2"
+  }
+}
