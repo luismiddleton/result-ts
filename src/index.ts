@@ -1,29 +1,43 @@
-import { AsyncResult, Result } from "./types";
+import { UnwrapError, type Result as TResult } from "./types";
 
-export async function getAsyncResult<T, E>(
-  fn: () => Promise<T>
-): AsyncResult<T, E> {
-  try {
-    const data = await fn();
-    return { ok: true, data };
-  } catch (error) {
-    return {
-      ok: false,
-      //@ts-ignore
-      error,
-    };
+class Result<T, E> {
+  constructor(private opts: TResult<T, E>) {}
+
+  static ok<T>(value: T) {
+    return new Result({ value, _tag: "ok" });
+  }
+
+  static err<E>(error: E) {
+    return new Result({ error, _tag: "error" });
+  }
+
+  static fromSync<V, E>(value: V, error: E) {
+    try {
+      return Result.ok(value);
+    } catch {
+      return Result.err(error);
+    }
+  }
+
+  isErr() {
+    return this.opts._tag === "error";
+  }
+
+  isOk() {
+    return this.opts._tag === "ok";
+  }
+
+  unwrap() {
+    if (this.opts._tag === "ok") {
+      return this.opts.value as T;
+    } else {
+      throw new UnwrapError();
+    }
+  }
+
+  unwrapOrDefault<F>(fallback: F) {
+    return this.opts._tag === "error" ? fallback : this.opts.value;
   }
 }
 
-export function getResult<T, E>(fn: () => T): Result<T, E> {
-  try {
-    const data = fn();
-    return { ok: true, data };
-  } catch (error) {
-    return {
-      ok: false,
-      //@ts-ignore
-      error,
-    };
-  }
-}
+export default Result;

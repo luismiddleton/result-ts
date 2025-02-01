@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Typescript implementation of the Result type pattern",
   "main": "dist/index.js",
+  "files": ["dist/index.js"],
   "scripts": {
     "build": "tsup",
     "changeset": "changeset",
@@ -13,7 +14,9 @@
   "keywords": [
     "typescript",
     "result",
-    "pattern"
+    "pattern",
+    "functional",
+    "programming"
   ],
   "author": "Luis Middleton",
   "license": "MIT",
