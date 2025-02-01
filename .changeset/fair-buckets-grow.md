@@ -2,4 +2,4 @@
 "@luism/result-ts": patch
 ---
 
-smaller bundle size
+smaller bundle size, monad is a class
